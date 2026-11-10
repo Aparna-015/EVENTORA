@@ -5,8 +5,11 @@ const express=require('express');
 const cors=require('cors');
 const dotenv=require('dotenv');
 dotenv.config();
+const authRoutes=require('./routes/auth');
 
 const mongoose=require('mongoose');
+
+app.use("/api/auth",authRoutes);
 
 mongoose.connect(process.env.MONGO_URI, {
   serverSelectionTimeoutMS: 5000, // Timeout after 5s instead of hanging
