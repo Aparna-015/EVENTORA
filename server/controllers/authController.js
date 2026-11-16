@@ -25,7 +25,7 @@ exports.registerUser = async (req, res) => {
         const hashedPassword = await bcrypt.hash(password, salt);
         
       // 1. Create the user in MongoDB
-        savedUser = await User.create({
+      const savedUser = await User.create({
             name,
             email,
             password: hashedPassword,

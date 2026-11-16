@@ -9,7 +9,7 @@ const OTPSchema = new mnongoose.Schema({
   },
   action: {
     type: String,
-    enum: ["account_verification", "logevent_booking"],
+    enum: ["account_verification", "event_booking"],
     required: true,
   },
   createdAt: {
